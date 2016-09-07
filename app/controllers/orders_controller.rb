@@ -40,4 +40,8 @@ class OrdersController < ApplicationController
       @order = Order.find params[:id]
     end
 
+<<<<<<< HEAD
 end
+=======
+end
+>>>>>>> e18fa9cf4f640d871c61543c5046f372bbc1e68a
