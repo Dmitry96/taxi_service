@@ -101,7 +101,7 @@ footer .footer_title {
 .column ul li{
 	height: 55px;
 	color: #eaeaea !important;
-	font: 17px 'fregat', sans-serif !important; 
+	font: 16px 'fregat', sans-serif !important; 
 	letter-spacing: 0em !important;
 	margin: 30px;
 }
@@ -134,4 +134,9 @@ a.navbar-brand {
 	border-radius: 5px;
 	display: block;
 	text-decoration: none;
+}
+
+
+a:hover {
+    border: 1px solid #fff;
 }
