@@ -9,7 +9,5 @@ class StaticPagesController < ApplicationController
   def for_drivers
   end
 
-  def service_quality
-	end
 
 end
