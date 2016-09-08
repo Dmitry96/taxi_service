@@ -24,9 +24,18 @@ html, body {
 	background-size: cover;
 }
 
+.form {
+
+}
+
 .form form {
-	margin: 0 auto !important;
-	width: 100%;
+	ul {
+		margin: 10px 30px !important;
+		margin-bottom: 20px !important;
+		width: 100%;
+		display: block;
+	}
+	
 	display: inline-block;
 	li {
 		list-style: none;
@@ -64,7 +73,7 @@ h4#call-taxi {
 	color: #eaeaea !important;
 	font: 18px 'fregat', sans-serif !important; 
 	letter-spacing: 0em !important;
-	margin-left: 40px !important;
+	margin-left: 70px !important;
 }
 
 a.navbar-brand {
