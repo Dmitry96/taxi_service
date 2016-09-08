@@ -109,7 +109,10 @@ footer .footer_title {
 
 .column ul li{
 	height: 55px;
-
+	color: #eaeaea !important;
+	font: 17px 'fregat', sans-serif !important; 
+	letter-spacing: 0em !important;
+	margin: 30px;
 }
 
 #header nav {
@@ -130,3 +133,14 @@ a.navbar-brand {
 	font: 18px 'fregat', sans-serif !important; 
 	letter-spacing: 0em !important;
 }
+
+.vk {
+	width: 200px;
+	height: 40px;
+	border: 1px dotted #ccc;
+	background: url(index.png);
+	border-radius: 5px;
+	display: block;
+	text-decoration: none;
+}
+
