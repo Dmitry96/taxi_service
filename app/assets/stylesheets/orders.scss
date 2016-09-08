@@ -54,7 +54,7 @@ html, body {
 	margin: 0 auto;
 }
 
-<<<<<<< HEAD
+
 #header nav{
 	background-color: rgba(0, 0, 0, 0);
 	border: 0;
@@ -100,9 +100,12 @@ footer .footer_title {
 
 .column ul li{
 	height: 55px;
-
+	color: #eaeaea !important;
+	font: 17px 'fregat', sans-serif !important; 
+	letter-spacing: 0em !important;
+	margin: 30px;
 }
-=======
+
 #header nav {
 	background-color: rgba(0,0,0,0);
 	border: 0;
@@ -121,4 +124,14 @@ a.navbar-brand {
 	font: 18px 'fregat', sans-serif !important; 
 	letter-spacing: 0em !important;
 }
->>>>>>> 43a3f05042bf03768cbfa6a51f1b8ae780f11cc0
+
+
+.vk {
+	width: 200px;
+	height: 40px;
+	border: 1px dotted #ccc;
+	background: url(index.png);
+	border-radius: 5px;
+	display: block;
+	text-decoration: none;
+}
