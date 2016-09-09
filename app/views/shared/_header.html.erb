@@ -3,6 +3,9 @@
 
     <div class="navbar-header">
       <a class="navbar-brand" href="/">Такси Генадий</a>
+      <% if user_signed_in? %>
+        <%= link_to("Admin", "/orders", class: 'navbar-brand') %>
+      <% end %>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
