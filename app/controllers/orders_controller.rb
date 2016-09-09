@@ -1,6 +1,7 @@
 class OrdersController < ApplicationController
 
 	before_action :set_order, only: [ :destroy, :edit, :update]
+	before_action :authenticate_user!, only: [ :index ]
 
 	def new
 		@order = Order.new
@@ -24,7 +25,8 @@ class OrdersController < ApplicationController
 
 	def index
 		# @phone = Order.find_by(phone_number: params[:phone_number])
-		@orders = Order.all.find_by(phone_number: params[:phone_number])
+		# @orders = Order.all.find_by(phone_number: params[:phone_number])
+		@orders = Order.paginate(:page => params[:page], :per_page => 10)
 	end
 
 	def destroy
