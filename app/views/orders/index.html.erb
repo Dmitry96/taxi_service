@@ -1,4 +1,4 @@
-<h1>Orders</h1>
+<br>
 
 <table class="table">
   <tr>
@@ -8,8 +8,12 @@
     <th>Дом</th>
     <th>Куда</th>
     <th>Когда</th>
+    <th>Статус</th>
   </tr>
   <div class="posts">
     <%= render @orders %>
+    <div class="pagination">
+      <%= will_paginate @orders %>
+    </div>
   </div>
 </table> 

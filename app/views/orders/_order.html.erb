@@ -1,8 +1,9 @@
 <tr>
-  <td><%= order.username %></td>
+  <td><%= link_to(order.username, edit_order_path(order)) %></td>
   <td><%= order.phone_number %></td>
   <td><%= order.adress_from %></td>
   <td><%= order.home_adress %></td>
   <td><%= order.adress_to %></td>
   <td><%= time_ago_in_words(order.created_at) %></td>
+  <td><%= order.status %></td>
 </tr>

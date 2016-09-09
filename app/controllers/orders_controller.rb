@@ -19,14 +19,23 @@ class OrdersController < ApplicationController
 	def edit
 	end
 
+	def edit
+		
+	end
+
 	def update
 		@order.update_attributes order_params
+		redirect_to orders_path
 	end
 
 	def index
 		# @phone = Order.find_by(phone_number: params[:phone_number])
 		# @orders = Order.all.find_by(phone_number: params[:phone_number])
 		@orders = Order.paginate(:page => params[:page], :per_page => 10)
+		# denied - отказ
+		# new - только поступил
+		# pending - ждет машину
+		# completed - успешно завершен
 	end
 
 	def destroy
@@ -36,7 +45,7 @@ class OrdersController < ApplicationController
 	private
 
 		def order_params
-			params.require(:order).permit(:username, :phone_number, :adress_from, :adress_to, :home_adress)
+			params.require(:order).permit(:username, :phone_number, :adress_from, :adress_to, :home_adress, :status)
 		end
 
 		def set_order

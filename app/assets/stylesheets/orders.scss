@@ -120,13 +120,11 @@ footer .footer_title {
 	margin: 30px;
 }
 
-<<<<<<< HEAD
+
 #header nav {
 	color: white;
 }
 
-=======
->>>>>>> db10a87ec2d4275023a4df9aec55a192185eb730
 h4#call-taxi {
 	color: #eaeaea !important;
 	font: 18px 'fregat', sans-serif !important; 
@@ -170,15 +168,6 @@ a.vk:hover {
   margin-right: 10px;
   margin-bottom: 40px;
 }
-<<<<<<< HEAD
-
-
-.formForService{
-  li {
-    list-style: none;
-  }
-}
-
 
 .form-control{
   margin-bottom: 10px;
@@ -188,6 +177,31 @@ a.vk:hover {
   width: 500px;
   margin: 0 auto;
   margin-top: 200px;
+  li {
+    list-style: none;
+  }
 }
-=======
->>>>>>> db10a87ec2d4275023a4df9aec55a192185eb730
+
+/* edit */
+
+.edit-form {
+  li {
+    list-style: none;
+  }
+  width: 500px;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+/* table */
+
+table.table tbody tr td a {
+  color: white;  
+}
+
+/* pagination */
+
+div.pagination {
+  bottom: 0;
+  //margin-top: 500px;
+}
