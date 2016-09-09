@@ -1,5 +1,4 @@
 <%= simple_form_for @order do |f| %>
-
 	<ul>
 		<li class="name">	<%= f.text_field :username, class: "form-control name", placeholder: 'Как вас зовут?' %></li>
 		<li class="from">	<%= f.text_field :adress_from, class: "form-control", placeholder: 'Откуда? улица(strada) Пушкина' %></li>
@@ -12,19 +11,34 @@
 	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
    <script type="text/javascript">
        ymaps.ready(init);
-       var myMap;
+       var myMap, route;
 
        function init(){     
            myMap = new ymaps.Map ("map", {
                center: [47.0105, 28.8638],
-               zoom: 12
-           });
+               zoom: 12,
+            controls: ['zoomControl', 'typeSelector',
+                       'geolocationControl', 'trafficControl',
+                       'fullscreenControl'] 
+        });
 
 
-       }
+  ymaps.route([
+      'Кишинёв, Молдова - Улица Пушкина',
+      'Кишинёв, Молдова - улица Н. Зелинского'
+  ]).then(
+      function (route) {
+          myMap.geoObjects.add(route);
+      },
+      function (error) {
+          alert("Возникла ошибка: " + error.message);
+      }
+  );
+
+}
  </script>
 
-	<div id="map" style="width: 600px; height: 400px"></div>
+	<div id="map" style="width: 650px; height: 450px"></div>
 
 <% end %>
 
