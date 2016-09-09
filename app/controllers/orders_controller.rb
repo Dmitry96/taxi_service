@@ -34,7 +34,7 @@ class OrdersController < ApplicationController
 	private
 
 		def order_params
-			params.require(:order).permit(:username, :phone_number, :adress_from, :adress_to)
+			params.require(:order).permit(:username, :phone_number, :adress_from, :adress_to, :home_adress)
 		end
 
 		def set_order

@@ -1,11 +1,5 @@
-<%= simple_form_for @service_quality do |f| %>
+<div class="formForService">
+  
+  <%= render 'form' %>
 
-  <ul>
-    <li class="name"> <%= f.text_field :theme, class: "form-control name", placeholder: 'Тема' %></li>
-    <li class="from"> <%= f.text_field :your_name, class: "form-control", placeholder: 'Ваше имя' %></li>
-    <li class="home_adress">  <%= f.text_field :phone_number, class: "form-control home_adress", placeholder: 'Ваш номер телефона' %></li>
-    <li class="to"> <%= f.text_field :your_email_adress, class: "form-control", placeholder: 'Ваш номер телефона' %></li>
-    <li>  <%= f.text_field :comment, class: "form-control", placeholder: 'Комментарий' %></li>
-    <li>  <%= f.submit "Заказать", class: "btn btn-success" %></li>
-  </ul>
-<% end %>
+</div>
