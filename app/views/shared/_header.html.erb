@@ -3,12 +3,9 @@
 
     <div class="navbar-header">
       <a class="navbar-brand" href="/">Такси Генадий</a>
-<<<<<<< HEAD
-=======
-      <% if user_signed_in? %>
-        <%= link_to("Admin", "/orders", class: 'navbar-brand') %>
-      <% end %>
->>>>>>> db10a87ec2d4275023a4df9aec55a192185eb730
+
+
+
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -17,6 +14,11 @@
       <li><%= link_to("Клиентам", "/for_clients") %></li>
       <li><%= link_to("Водителям", "/for_drivers") %></li>
       <li><%= link_to("Служба качества", "/service_qualities/new") %></li>
+      <li>
+        <% if user_signed_in? %>
+          <%= link_to("Admin", "/orders") %>
+        <% end %>
+      </li>
     </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
