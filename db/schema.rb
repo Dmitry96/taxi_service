@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 20160909123043) do
     t.datetime "created_at",                   null: false
     t.datetime "updated_at",                   null: false
     t.string   "home_adress"
-    t.string   "status",                  default: "new"
+    t.string   "status",       default: "new"
   end
 
   create_table "service_qualities", force: :cascade do |t|

@@ -16,6 +16,7 @@
 //= require_tree .
 //= require bootstrap-sprockets
 
+
 $(document).ready(function(){
    $("#order_adress_from").keyup(function(){
        //по мере ввода фразы, событие будет срабатывать всякий раз
@@ -98,5 +99,4 @@ $.ui.autocomplete.filter = function (array, term) {
        });
    });
 });
-
 
