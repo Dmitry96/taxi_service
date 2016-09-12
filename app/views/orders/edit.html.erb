@@ -1,0 +1,17 @@
+<div class="edit-form">
+  
+  <%= simple_form_for @order do |f| %>
+
+    <ul>
+      <li class="name">         <%= f.input :username,    label: 'Имя',   class: "form-control name",        placeholder: 'Как вас зовут?' %></li>
+      <li class="from">         <%= f.input :adress_from, label: 'Откуда',class: "form-control",             placeholder: 'Откуда? улица(strada) Пушкина' %></li>
+      <li class="home_adress">  <%= f.input :home_adress, label: 'Дом',   class: "form-control home_adress", placeholder: 'Дом' %></li>
+      <li class="to">           <%= f.input :adress_to,   label: 'Куда',  class: "form-control",             placeholder: 'Куда?' %></li>
+      <li>                      <%= f.input :phone_number,label: 'Номер', class: "form-control",             placeholder: 'Ваш номер телефона' %></li>
+      <li>                      <%= f.input :status,      label: 'Статус', status: 'new', collection: [ 'new',  'pending',  'denied', 'completed' ] %></li>
+      <li>                      <%= f.submit "Изменить",                  class: "btn btn-success" %></li>
+    </ul>
+
+  <% end %>
+
+</div>

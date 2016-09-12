@@ -1,0 +1,2 @@
+module ServiceQualitiesHelper
+end

@@ -1,0 +1,19 @@
+<br>
+
+<table class="table">
+  <tr>
+    <th>Имя</th>
+    <th>Номер</th>
+    <th>Откуда</th>
+    <th>Дом</th>
+    <th>Куда</th>
+    <th>Когда</th>
+    <th>Статус</th>
+  </tr>
+  <div class="posts">
+    <%= render @orders %>
+    <div class="pagination">
+      <%= will_paginate @orders %>
+    </div>
+  </div>
+</table> 
