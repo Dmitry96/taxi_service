@@ -9,6 +9,7 @@ class OrdersController < ApplicationController
 
 	def create
 		@order = Order.new order_params
+
 		if @order.save
       redirect_to root_path, :notice => 'Спасибо за ваш заказ!!'
     else
@@ -53,8 +54,7 @@ class OrdersController < ApplicationController
 		end
 
 		def set_order
-      @order = Order.find params[:id]
+      		@order = Order.find_by(phone_number: params[:phone_number])
     end
 
 end
-

@@ -1,4 +1,5 @@
 default: &default
+<<<<<<< HEAD
   adapter: postgresql
   encoding: unicode
   pool: 5
@@ -16,3 +17,22 @@ production:
   database: taxi_service_production
   username: taxi_service
   password: <%= ENV['TAXI_SERVICE_DATABASE_PASSWORD'] %>
+=======
+ adapter: postgresql
+ encoding: unicode
+ pool: 5
+
+development:
+ <<: *default
+ database: taxi_service_development
+
+test:
+ <<: *default
+ database: taxi_service_test
+
+production:
+ <<: *default
+ database: taxi_service_production
+ username: taxi_service
+ password: <%= ENV['TAXI_SERVICE_DATABASE_PASSWORD'] %>
+>>>>>>> 3e5caead436548a5fbc6531d675225e37c12aadc
