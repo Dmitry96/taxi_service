@@ -1,9 +1,13 @@
 <tr>
-  <td><%= link_to(order.username, edit_order_path(order)) %></td>
+  <td><%= order.username %></td>
   <td><%= order.phone_number %></td>
   <td><%= order.adress_from %></td>
   <td><%= order.home_adress %></td>
   <td><%= order.adress_to %></td>
   <td><%= time_ago_in_words(order.created_at) %></td>
-  <td><%= order.status %></td>
+  <td class='<%= order.status %>'><%= order.status %></td>
+  <td class="link">
+    <%= link_to '<<', to_left_order_path(order), data: {method: :put}, class: 'to left' %>
+    <%= link_to '>>', to_right_order_path(order), data: {method: :put}, class: 'to right' %>
+  </td>
 </tr>

@@ -1,7 +1,7 @@
 class OrdersController < ApplicationController
 
 	before_action :set_order, only: [ :destroy, :edit, :update]
-	before_action :authenticate_user!, only: [ :index ]
+	before_action :authenticate_user!, only: [ :index, :edit, :destroy ]
 
 	def new
 		@order = Order.new
@@ -19,10 +19,6 @@ class OrdersController < ApplicationController
 	def edit
 	end
 
-	def edit
-		
-	end
-
 	def update
 		@order.update_attributes order_params
 		redirect_to orders_path
@@ -32,14 +28,22 @@ class OrdersController < ApplicationController
 		# @phone = Order.find_by(phone_number: params[:phone_number])
 		# @orders = Order.all.find_by(phone_number: params[:phone_number])
 		@orders = Order.paginate(:page => params[:page], :per_page => 10)
-		# denied - отказ
-		# new - только поступил
-		# pending - ждет машину
-		# completed - успешно завершен
 	end
 
 	def destroy
 		@order.destroy
+	end
+
+	def to_right
+    @order = Order.find params[:id]
+    @order.to_right
+    redirect_to orders_path
+	end
+
+	def to_left
+    @order = Order.find params[:id]
+    @order.to_left
+    redirect_to orders_path
 	end
 
 	private

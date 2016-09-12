@@ -12,4 +12,9 @@ Rails.application.routes.draw do
   
   resources :service_qualities
 
+  resources :orders do
+    put :to_right, on: :member
+    put :to_left, on: :member
+  end
+
 end
