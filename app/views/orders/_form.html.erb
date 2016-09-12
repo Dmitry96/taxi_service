@@ -5,21 +5,47 @@
 <br>
 <%= f.label :adress_from, "Адрес откуда едите" %>
 <br>
-<%= f.text_field :adress_from, class: "form-control" %>
+<%= f.text_field :adress_from, class: "form-control"%>
 <br>
 <%= f.label :adress_to, "Адрес куда едите" %>
 <br>
 <%= f.text_field :adress_to, class: "form-control" %>
 <br>
-<%= f.label :phone_number, "Ваш номер телефона" %>
-<br>
-<%= f.text_field :phone_number, class: "form-control" %>
-<br>
 <%= f.label :home_adress, "Номер дома" %>
 <br>
 <%= f.text_field :home_adress, class: "form-control" %>
 <br>
-
+<%= f.label :phone_number, "Ваш номер телефона" %>
+<br>
+<%= f.text_field :phone_number, class: "form-control" %>
+<br>
 <%= f.submit "Заказать", class: "btn btn-success" %>
 
 <% end %>
+
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script type="text/javascript">
+        ymaps.ready(init);
+        var myMap,
+            myPlacemark;
+
+        function init(){     
+            myMap = new ymaps.Map ("map", {
+                center: [47.0105, 28.8638],
+                zoom: 12
+            });
+
+            myPlacemark = new ymaps.Placemark([47.0105, 28.8638], { 
+            });
+
+            myMap.geoObjects.add(myPlacemark);
+        }
+        </script>
+        </head>
+
+<body>
+    <div id="map" style="width: 600px; height: 400px"></div>
+</body>
+
+
+
