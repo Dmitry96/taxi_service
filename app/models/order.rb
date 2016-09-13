@@ -25,7 +25,7 @@ class Order < ActiveRecord::Base
     if self.status != 'denied'
       self.status = 'denied'
     else
-      self.completed = 'pending'
+      self.status = 'pending'
     end
     save
   end

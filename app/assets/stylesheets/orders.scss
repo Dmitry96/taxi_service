@@ -172,7 +172,7 @@ a.vk:hover {
 }
 
 .form-control{
-  margin-bottom: 10px;
+  margin-bottom: 17px;
 }
 
 .formForService{
@@ -208,7 +208,7 @@ div.pagination {
   //margin-top: 500px;
 }
 
-<<<<<<< HEAD
+
 /* admin */
 
 table.table {
@@ -238,10 +238,17 @@ table.table {
   color: red !important;
 }
 
-=======
 #map{
   border-style: solid;
   border-width: 6px;
   border-color: rgba(115, 115, 115, 0.3);
 }
->>>>>>> 3e5caead436548a5fbc6531d675225e37c12aadc
+
+.posts ul li{
+  list-style: none;
+}
+
+.her{
+  margin: 0 auto;
+  width: 370px;
+}

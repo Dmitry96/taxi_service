@@ -1,12 +1,12 @@
   <%= simple_form_for @service_quality do |f| %>
 
     <ul>
-      <li class="name"> <%= f.text_field :theme, class: "form-control name", placeholder: 'Тема' %></li>
-      <li class="from"> <%= f.text_field :your_name, class: "form-control", placeholder: 'Ваше имя' %></li>
-      <li class="home_adress">  <%= f.text_field :phone_number, class: "form-control home_adress", placeholder: 'Ваш номер телефона' %></li>
-      <li class="to"> <%= f.text_field :your_email_adress, class: "form-control", placeholder: 'Ваш email адрес' %></li>
-      <li>  <%= f.input :comment, as: :text, label: false, class: "form-control", placeholder: 'Комментарий' %></li>
-      <li>  <%= f.submit "Заказать", class: "btn btn-success" %></li>
+      <li class="theme"> <%= f.text_field :theme, class: "form-control theme", placeholder: 'Тема' %></li>
+      <li class="name"> <%= f.text_field :your_name, class: "form-control name", placeholder: 'Ваше имя' %></li>
+      <li class="phone">  <%= f.text_field :phone_number, class: "form-control phone", placeholder: 'Ваш номер телефона' %></li>
+      <li class="email"> <%= f.text_field :your_email_adress, class: "form-control email", placeholder: 'Ваш email адрес' %></li>
+      <li class="comment">  <%= f.input :comment, as: :text, label: false, class: "form-control comment", placeholder: 'Комментарий' %></li>
+      <li>  <%= f.submit "Оставить отзыв", class: "btn btn-success" %></li>
     </ul>
 
   <% end %>

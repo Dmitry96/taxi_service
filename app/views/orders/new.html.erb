@@ -1,42 +1,35 @@
-<div class="form">
-<div class="tel_top"><span>+373</span> <span>(69)</span> 666-666</div>
+  <div class="form">
+    <div class="tel_top"><span>+373</span> <span>(69)</span> 666-666</div>
 
-<<<<<<< HEAD
-<h4 id="call-taxi">Вызов такси онлайн:</h4>
-<%= render 'form' %>
-
-
-<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-<script type="text/javascript">
-
-ymaps.ready(init);
-var myMap, route, start, end;
+    <h4 id="call-taxi">Вызов такси онлайн:</h4>
+      <%= render 'form' %>
 
 
-function init(){
-myMap = new ymaps.Map ("map", {
-center: [47.0105, 28.8638],
-zoom: 12,
-});
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script type="text/javascript">
 
-order_phone_number.onclick = function(){
+    ymaps.ready(init);
+    var myMap, route, start, end;
 
-start = document.getElementById('order_adress_from').value
-end = document.getElementById('order_adress_to').value
-//order_adress_from.onblur = function() {
-//start = this.value;
-//};
 
-//order_adress_to.onblur = function() {
-//end = this.value;
-//};
-ymaps.route([
-start,
-end,
-]).then(
-function (route) {
-route && myMap.geoObjects.remove(route);
-myMap.geoObjects.add(route);
+    function init(){
+      myMap = new ymaps.Map ("map", {
+      center: [47.0105, 28.8638],
+      zoom: 12,
+    });
+
+    order_phone_number.onclick = function(){
+
+      start = document.getElementById('order_adress_from').value
+      end = document.getElementById('order_adress_to').value
+
+  ymaps.route([
+    start,
+    end,
+  ]).then(
+  function (route) {
+  route && myMap.geoObjects.remove(route);
+  myMap.geoObjects.add(route);
 
 
 });
@@ -46,45 +39,3 @@ myMap.geoObjects.add(route);
 
 <div id="map" style="width: 550px; height: 400px"></div>
 </div>
-=======
-	<h4 id="call-taxi">Вызов такси онлайн:</h4>
-	<%= render 'form' %>
-  
-
-  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-   <script type="text/javascript">
-   
-       ymaps.ready(init);
-       var myMap, route, start, end;
-    
-
-       function init(){     
-           myMap = new ymaps.Map ("map", {
-            center: [47.0105, 28.8638],
-            zoom: 12,
-        });
-
-
-     order_phone_number.onclick = function(){    
-
-       start = document.getElementById('order_adress_from').value
-  		 end = document.getElementById('order_adress_to').value
-
-    if(end != null)       
-      ymaps.route([
-        start,
-        end,
-      ]).then(
-          function (route) {
-            route && myMap.geoObjects.remove(route);
-            myMap.geoObjects.add(route);
-          });
-    else
-      alert("hui")
-    }
-  };
- </script>
-
-	<div id="map" style="width: 550px; height: 400px"></div>
-</div>
->>>>>>> 3e5caead436548a5fbc6531d675225e37c12aadc
