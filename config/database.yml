@@ -16,3 +16,7 @@ production:
   database: taxi_service_production
   username: taxi_service
   password: <%= ENV['TAXI_SERVICE_DATABASE_PASSWORD'] %>
+<<<<<<< HEAD
+=======
+
+>>>>>>> a1dd73131eeaa9456e6e851e72164e2c4bf20ce8

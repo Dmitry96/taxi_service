@@ -1,41 +1,48 @@
-<div class="form">
-<div class="tel_top"><span>+373</span> <span>(69)</span> 666-666</div>
+  <div class="form">
+    <div class="tel_top"><span>+373</span> <span>(69)</span> 666-666</div>
 
+<<<<<<< HEAD
 <h4 id="call-taxi">Вызов такси онлайн:</h4>
 <%= render 'form' %>
+=======
+    <h4 id="call-taxi">Вызов такси онлайн:</h4>
+      <%= render 'form' %>
+>>>>>>> a1dd73131eeaa9456e6e851e72164e2c4bf20ce8
 
 
-<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-<script type="text/javascript">
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script type="text/javascript">
 
-ymaps.ready(init);
-var myMap, route, start, end;
+    ymaps.ready(init);
+    var myMap, route, start, end;
 
 
+<<<<<<< HEAD
 function init(){
 myMap = new ymaps.Map ("map", {
   center: [47.0105, 28.8638],
   zoom: 12,
 });
+=======
+    function init(){
+      myMap = new ymaps.Map ("map", {
+      center: [47.0105, 28.8638],
+      zoom: 12,
+    });
+>>>>>>> a1dd73131eeaa9456e6e851e72164e2c4bf20ce8
 
-order_phone_number.onclick = function(){
+    order_phone_number.onclick = function(){
 
-start = document.getElementById('order_adress_from').value
-end = document.getElementById('order_adress_to').value
-//order_adress_from.onblur = function() {
-//start = this.value;
-//};
+      start = document.getElementById('order_adress_from').value
+      end = document.getElementById('order_adress_to').value
 
-//order_adress_to.onblur = function() {
-//end = this.value;
-//};
-ymaps.route([
-start,
-end,
-]).then(
-function (route) {
-route && myMap.geoObjects.remove(route);
-myMap.geoObjects.add(route);
+  ymaps.route([
+    start,
+    end,
+  ]).then(
+  function (route) {
+  route && myMap.geoObjects.remove(route);
+  myMap.geoObjects.add(route);
 
 
 });
@@ -43,5 +50,10 @@ myMap.geoObjects.add(route);
 };
 </script>
 
+<<<<<<< HEAD
 <div id="map"></div>
 </div>
+=======
+<div id="map" style="width: 550px; height: 400px"></div>
+</div>
+>>>>>>> a1dd73131eeaa9456e6e851e72164e2c4bf20ce8
