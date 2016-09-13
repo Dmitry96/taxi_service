@@ -7,7 +7,7 @@ class Order < ActiveRecord::Base
     if self.status == 'new'
       self.status = 'pending'
     elsif self.status == 'pending'
-      self.completed = 'completed'
+      self.status = 'completed'
     end
     save
   end
@@ -16,7 +16,7 @@ class Order < ActiveRecord::Base
     if self.status == 'completed'
       self.status = 'pending'
     elsif self.status == 'pending'
-      self.completed = 'new'
+      self.status = 'new'
     end
     save
   end
