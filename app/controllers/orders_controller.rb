@@ -1,6 +1,6 @@
 class OrdersController < ApplicationController
 
-	before_action :set_order, only: [ :destroy, :edit, :update]
+	before_action :set_order, only: [ :destroy, :edit, :update, :to_new, :to_pending, :to_completed, :to_denied]
 	before_action :authenticate_user!, only: [ :index, :edit, :destroy ]
 
 	def new
@@ -35,15 +35,23 @@ class OrdersController < ApplicationController
 		@order.destroy
 	end
 
-	def to_right
-    @order = Order.find params[:id]
-    @order.to_right
+	def to_new
+    @order.to_new
     redirect_to orders_path
 	end
 
-	def to_left
-    @order = Order.find params[:id]
-    @order.to_left
+	def to_pending
+    @order.to_pending
+    redirect_to orders_path
+	end
+
+	def to_completed
+    @order.to_completed
+    redirect_to orders_path
+	end
+	
+	def to_denied
+    @order.to_denied
     redirect_to orders_path
 	end
 
@@ -54,7 +62,7 @@ class OrdersController < ApplicationController
 		end
 
 		def set_order
-      		@order = Order.find_by(phone_number: params[:phone_number])
+      @order = Order.find params[:id]
     end
 
 end

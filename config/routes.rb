@@ -13,8 +13,10 @@ Rails.application.routes.draw do
   resources :service_qualities
 
   resources :orders do
-    put :to_right, on: :member
-    put :to_left, on: :member
+    put :to_new, on: :member
+    put :to_pending, on: :member
+    put :to_completed, on: :member
+    put :to_denied, on: :member
   end
 
 end

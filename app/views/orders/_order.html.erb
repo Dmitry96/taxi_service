@@ -7,7 +7,11 @@
   <td><%= time_ago_in_words(order.created_at) %></td>
   <td class='<%= order.status %>'><%= order.status %></td>
   <td class="link">
-    <%= link_to '<<', to_left_order_path(order), data: {method: :put}, class: 'to left' %>
-    <%= link_to '>>', to_right_order_path(order), data: {method: :put}, class: 'to right' %>
+    <span class='links'>
+      <%= link_to content_tag('span', '', class: 'new_button'), to_new_order_path(order),  data: {method: :put}, class: 'to_new' %>
+      <%= link_to content_tag('span', '', class: 'pending_button'), to_pending_order_path(order),  data: {method: :put}, class: 'to_pending' %>
+      <%= link_to content_tag('span', '', class: 'completed_button'), to_completed_order_path(order),  data: {method: :put}, class: 'to_completed' %>
+      <%= link_to content_tag('span', '', class: 'denied_button'), to_denied_order_path(order),  data: {method: :put}, class: 'to_denied' %>
+    </span>
   </td>
 </tr>
