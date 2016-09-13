@@ -208,10 +208,6 @@ div.pagination {
   //margin-top: 500px;
 }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> a1dd73131eeaa9456e6e851e72164e2c4bf20ce8
 /* admin */
 
 table.table {
@@ -221,7 +217,7 @@ table.table {
 }
 
 .new {
-  color: green;
+  color: blue;
 }
 
 .pending {
@@ -229,8 +225,7 @@ table.table {
 }
 
 .completed {
-  color: gray;
-  //text-decoration: line-through;
+  color: green;
 }
 
 .denied {
@@ -240,13 +235,13 @@ table.table {
 .link a {
   color: red !important;
   &.to_new {
-    color: green !important;
+    color: blue !important;
   }
   &.to_pending {
     color: orange !important;
   }
   &.to_completed {
-    color: gray !important;
+    color: green !important;
   }
 }
 
@@ -256,12 +251,11 @@ table.table {
   border-color: rgba(115, 115, 115, 0.3);
 }
 
-<<<<<<< HEAD
 span.new_button {
   width: 15px;
   height: 15px;
   border-radius: 10px;
-  background-color: green;
+  background-color: blue;
   display: inline-block;
   margin-left: 15px;
 }
@@ -278,7 +272,7 @@ span.completed_button {
   width: 15px;
   height: 15px;
   border-radius: 10px;
-  background-color: gray;
+  background-color: green;
   display: inline-block;
 }
 
@@ -304,7 +298,8 @@ table.table tbody tr th {
 
 th.number {
   width: 150px;
-=======
+}
+
 .posts ul li{
   list-style: none;
 }
@@ -312,5 +307,4 @@ th.number {
 .her{
   margin: 0 auto;
   width: 370px;
->>>>>>> a1dd73131eeaa9456e6e851e72164e2c4bf20ce8
 }
