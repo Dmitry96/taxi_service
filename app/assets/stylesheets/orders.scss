@@ -21,8 +21,9 @@ html, body {
 	margin: 0;
 	padding: 0;
 	height: 100%;
-	background: #000000 url(http://таксиволодя.рф//content/photo/full/20150622162145.jpg) fixed no-repeat top center;
-	height: 100%;
+	//background: #000000 url(http://таксиволодя.рф//content/photo/full/20150622162145.jpg) fixed no-repeat top center;
+	background-image: url(photo_1.jpg);
+  height: 100%;
 	background-size: cover;
 }
 
@@ -58,6 +59,8 @@ html, body {
 		display: inline-block;
 	}
 }
+
+//text-shadow: 1px 1px 2px black, 0 0 1em black;
 
 #map {
 	margin: 0 auto;
@@ -165,7 +168,7 @@ a.vk:hover {
   -o-border-radius: 3px;
   -ms-border-radius: 3px;
   border-radius: 5px;
-  box-shadow: 0px 4px 0px #da6a08;
+  box-shadow: 0px 4px 0px #edc115;
 	float:right;
   margin-right: 10px;
   margin-bottom: 40px;
@@ -226,6 +229,7 @@ table.table {
 
 .completed {
   color: green;
+  //text-decoration: line-through;
 }
 
 .denied {
@@ -311,4 +315,9 @@ th.status {
 .her{
   margin: 0 auto;
   width: 370px;
+}
+
+input#submitbotton {
+  background-color: #edc115 !important;
+  border-color: #edc115 !important;
 }

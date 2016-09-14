@@ -1,8 +1,7 @@
-<div class="form">
-<div class="tel_top"><span>+373</span> <span>(69)</span> 666-666</div>
-
-<h4 id="call-taxi">Вызов такси онлайн:</h4>
-<%= render 'form' %>
+  <div class="form">
+    <div class="tel_top"><span>+373</span> <span>(69)</span> 666-666</div>
+      <h4 id="call-taxi">Вызов такси онлайн:</h4>
+        <%= render 'form' %>
 
 <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 <script type="text/javascript">
@@ -15,11 +14,18 @@ myMap = new ymaps.Map ("map", {
 center: [47.0105, 28.8638],
 zoom: 12,
 });
+    ymaps.ready(init);
+    var myMap, route, start, end;
 
-order_phone_number.onclick = function(){
+    function init(){
+    myMap = new ymaps.Map ("map", {
+      center: [47.0105, 28.8638],
+      zoom: 12,
+    });
 
-start = document.getElementById('order_adress_from').value
-end = document.getElementById('order_adress_to').value
+    order_phone_number.onclick = function(){
+      start = document.getElementById('order_adress_from').value
+      end = document.getElementById('order_adress_to').value
 
 ymaps.route([
 start,
