@@ -229,7 +229,10 @@ table.table {
 
 .completed {
   color: green;
+<<<<<<< HEAD
   //text-decoration: line-through;
+=======
+>>>>>>> a021810386b4e4f6b12e0698754e32e0d3698a77
 }
 
 .denied {
@@ -239,7 +242,11 @@ table.table {
 .link a {
   color: red !important;
   &.to_new {
+<<<<<<< HEAD
     color:  blue!important;
+=======
+    color: blue !important;
+>>>>>>> a021810386b4e4f6b12e0698754e32e0d3698a77
   }
   &.to_pending {
     color: orange !important;
