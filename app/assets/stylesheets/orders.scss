@@ -64,8 +64,8 @@ html, body {
 
 #map {
 	margin: 0 auto;
-  width: 500px;
-  height: 400px;
+  width: 1000px;
+  height: 540px;
 }
 
 
@@ -95,7 +95,8 @@ body {
 #footer {
   width: 100%;
   position: absolute;
-  background: rgba(115, 115, 115, 0.3);
+  //background: rgba(115, 115, 115, 0.3);
+  background: rgba(0,0, 0, 0.3);
   min-width: 993px;
   background-size: cover;
 	color: white !important;

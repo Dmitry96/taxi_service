@@ -1,44 +1,37 @@
-  <div class="form">
+    <div class="form">
     <div class="tel_top"><span>+373</span> <span>(69)</span> 666-666</div>
-      <h4 id="call-taxi">Вызов такси онлайн:</h4>
-        <%= render 'form' %>
+    <h4 id="call-taxi">Вызов такси онлайн:</h4>
+    <%= render 'form' %>
 
-<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-<script type="text/javascript">
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script type="text/javascript">
 
-ymaps.ready(init);
-var myMap, route, start, end;
-
-function init(){
-myMap = new ymaps.Map ("map", {
-center: [47.0105, 28.8638],
-zoom: 12,
-});
     ymaps.ready(init);
     var myMap, route, start, end;
 
     function init(){
     myMap = new ymaps.Map ("map", {
-      center: [47.0105, 28.8638],
-      zoom: 12,
+    center: [47.0105, 28.8638],
+    zoom: 12,
     });
 
     order_phone_number.onclick = function(){
-      start = document.getElementById('order_adress_from').value
-      end = document.getElementById('order_adress_to').value
+    start = document.getElementById('order_adress_from').value
+    end = document.getElementById('order_adress_to').value
 
-ymaps.route([
-start,
-end,
-]).then(
-function (route) {
-route && myMap.geoObjects.remove(route);
-myMap.geoObjects.add(route);
+    ymaps.route([
+    start,
+    end,
+    ]).then(
+    function (route) {
+    route && myMap.geoObjects.remove(route);
+    myMap.geoObjects.add(route);
 
-});
-}
-};
-</script>
+    });
+    }
+    };
+    </script>
 
-<div id="map"></div>
-</div>
+    <div id="map"></div>
+    </div>
+
