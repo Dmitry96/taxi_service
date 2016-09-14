@@ -27,11 +27,8 @@ class Order < ActiveRecord::Base
   def to_denied
     if self.status != 'denied'
       self.status = 'denied'
-<<<<<<< HEAD
-=======
     else
       self.status = 'pending'
->>>>>>> a1dd73131eeaa9456e6e851e72164e2c4bf20ce8
     end
     save
   end
