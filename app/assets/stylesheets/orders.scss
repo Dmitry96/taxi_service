@@ -85,7 +85,7 @@ html {
 }
 
 body {
-  margin-bottom: 100px;
+  margin-bottom: 800px;
   height: 100%;
 }
 
@@ -165,7 +165,7 @@ a.vk:hover {
   -o-border-radius: 3px;
   -ms-border-radius: 3px;
   border-radius: 5px;
-  box-shadow: 0px 4px 0px #4cae4c;
+  box-shadow: 0px 4px 0px #da6a08;
 	float:right;
   margin-right: 10px;
   margin-bottom: 40px;
@@ -298,6 +298,10 @@ table.table tbody tr th {
 
 th.number {
   width: 150px;
+}
+
+th.status {
+  width: 100px;
 }
 
 .posts ul li{
